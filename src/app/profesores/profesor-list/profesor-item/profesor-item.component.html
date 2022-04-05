@@ -1,0 +1,18 @@
+<td class="align-middle">{{ profesor?.id }}</td>
+<td class="align-middle">{{ profesor?.nombres }}</td>
+<td class="align-middle">{{ profesor?.apellidos }}</td>
+<td class="text-center">
+    <a href="#" class="btn btn-sm btn-outline-primary" [routerLink]="[profesor?.id] + '/alumnos'">
+        <i class="bi bi-people-fill"></i> ALUMNOS
+    </a>
+</td>
+<td class="text-center">
+    <a href="#" class="btn btn-sm btn-warning" [routerLink]="[profesor?.id]">
+        <i class="bi bi-pencil"></i>
+    </a>
+</td>
+<td class="text-center">
+    <button class="btn btn-sm btn-danger" (click)="eliminar()">
+        <i class="bi bi-x-lg"></i>
+    </button>
+</td>

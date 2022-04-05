@@ -1,0 +1,17 @@
+<div class="row">
+    <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">Id</th>
+            <th scope="col" class="text-center">Nombres</th>
+            <th scope="col" class="text-center">Apellidos</th>
+            <th scope="col" class="text-center">Asignar</th>
+            <th scope="col" class="text-center">Editar</th>
+            <th scope="col" class="text-center">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr app-profesor-item *ngFor="let profesor of profesores" [profesor]="profesor" (profesorEliminado)="onProfesorEliminado(profesor)"></tr>
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,42 @@
+<div class="col-md-12">
+    <h4 class="card-title" id="basic-layout-icons">{{ titulo }}</h4>
+    <p></p>
+    <form [formGroup]="alumnoForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="form-group">
+                <label for="nombres">Nombres</label>
+                <input type="text" id="nombres" class="form-control" placeholder="Nombres completos"
+                    formControlName="nombres">
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" class="form-control" placeholder="Apellidos completos"
+                    formControlName="apellidos">
+            </div>
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de nacimiento</label>
+                <input type="date" id="fechaNacimiento" class="form-control" formControlName="fechaNacimiento">
+            </div>
+            <div class="form-group">
+                <label for="genero">Género</label>
+                <select id="genero" class="form-control" formControlName="genero">
+                    <option value="M" selected>Masculino</option>
+                    <option value="F">Femenino</option>
+                </select>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-12 text-end">
+                <a class="btn btn-outline-danger me-2" [routerLink]="['/alumnos']">
+                    <i class="bi bi-x-circle"></i>
+                    Cancelar
+                </a>
+                <button class="btn btn-outline-primary" type="submit" [disabled]="!alumnoForm.valid">
+                    <i class="bi bi-box-arrow-down"></i>
+                    {{ button }}
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

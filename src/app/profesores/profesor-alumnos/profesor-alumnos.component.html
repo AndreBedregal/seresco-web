@@ -1,0 +1,19 @@
+<div class="row">
+    <h4>{{ titulo }}</h4>
+    <div class="col-md-12 text-end">
+        <a class="btn btn-outline-primary mb-2" href="#" role="button" [routerLink]="['/profesores']">
+            <i class="bi bi-card-list"></i> Ver todos
+        </a>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <app-alumnos-asignados-list [alumnosAsignados]="alumnosAsignados" [profesorId]="id" (alumnoDesasignadoEvent)="onAlumnosChange()"></app-alumnos-asignados-list>
+        </div>
+        <div class="col-md-2">
+            
+        </div>
+        <div class="col-md-5">
+            <app-alumnos-disponibles-list [alumnosDisponibles]="alumnosDisponibles" [profesorId]="id" (alumnoAsignadoEvent)="onAlumnosChange()"></app-alumnos-disponibles-list>
+        </div>
+    </div>
+</div>

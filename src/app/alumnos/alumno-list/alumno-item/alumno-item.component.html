@@ -1,0 +1,7 @@
+<td class="align-middle">{{ alumno?.id }}</td>
+<td class="align-middle">{{ alumno?.nombres }}</td>
+<td class="align-middle">{{ alumno?.apellidos }}</td>
+<td class="align-middle">{{ alumno?.fechaNacimiento | date: 'dd-MMM-yyyy' }}</td>
+<td class="align-middle">{{ alumno?.genero }}</td>
+<td><a href="#" class="btn btn-sm btn-warning" [routerLink]="[alumno?.id]"><i class="bi bi-pencil"></i></a></td>
+<td><button class="btn btn-sm btn-danger" (click)="eliminar()"><i class="bi bi-x-lg"></i></button></td>
